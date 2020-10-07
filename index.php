@@ -23,14 +23,20 @@
               </div>
         </header>
       <main>
-        <div class="cds-container container">
+        <div class="dischi container">
             <!-- Disco ad esempio -->
-            <div class="cd">
-                <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Ten_Summoner%27s_Tales.jpg" alt="">
-                <h3>Ten's Summoners Tales</h3>
-                <span class="author">Sting</span>
-                <span class="year">1993</span>
-            </div>
+          <?php include 'database-dischi.php';
+            foreach ($dischi as $key) {
+          ?>
+          <div class="cd">
+            <img src="<?php echo $key["picture"] ?>" alt="">
+            <h3><?php echo $key["title"] ?></h3>
+            <span class="author"><?php echo $key["author"] ?></span>
+            <span class="year"><?php echo $key["year"] ?></span>
+          </div>
+          <?php
+            }
+          ?>
         </div>
       </main>
     </body>

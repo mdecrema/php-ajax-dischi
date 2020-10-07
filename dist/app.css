@@ -39,7 +39,7 @@ header img {
   transform: rotate(90deg);
 }
 
-.cds-container {
+.dischi {
   display: flex;
   justify-content: center;
   align-items: center;
