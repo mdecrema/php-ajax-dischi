@@ -69,6 +69,12 @@ header img {
 
 .cd img {
     max-width: 100%;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.cd img:hover {
+  opacity: 0.5;
 }
 
 .cd h3 {
@@ -76,6 +82,11 @@ header img {
     color: white;
     font-size: 22px;
     text-transform: uppercase;
+    cursor: pointer;
+}
+
+.cd h3:hover {
+  color: grey;
 }
 
 .cd span.author {
