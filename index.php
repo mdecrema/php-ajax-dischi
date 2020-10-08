@@ -23,7 +23,6 @@
               <option class="type" value="4">Jazz</option>
               <option class="type" value="5">House/Techno</option>
             </select>
-            <button class="btn-invio" id="invio" type="submit">Cerca</button>
           </div>
         </div>
       </header>
@@ -33,6 +32,9 @@
       <main>
         <!-- Contenitore lista album -->
         <div class="dischi container">
+
+        </div>
+        <!-- /Contenitore lista album -->
             <!-- template -->
           <script id="entry-template" type="text/x-handlebars-template">
 
@@ -45,8 +47,6 @@
 
           </script>
           <!-- /template -->
-        </div>
-        <!-- /Contenitore lista album -->
       </main>
       <!-- /Contenuto principale pagina -->
 
