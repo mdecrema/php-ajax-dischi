@@ -1,6 +1,5 @@
 //const Handlebars = require("handlebars");
 //const $ = require("jquery");
-
 $("document").ready(function() {
 
 dati(5);
@@ -26,8 +25,6 @@ function dati(num) {
       let brano = value[i];
 
       if (brano.genre == genre) {
-
-
   // Creo un oggetto con un richiamo alle varie caratteristiche
       var album = {
         "image": brano.picture,
@@ -36,7 +33,6 @@ function dati(num) {
         "year": brano.year,
         //"genre": brano.genre
       }
-
   // Vado a inserire tutto nel tamplate e lo invio all'html
       var source = $("#entry-template").html();
       var template = Handlebars.compile(source);
@@ -48,16 +44,11 @@ function dati(num) {
   }
 }
 
-
-  // Scelta Genere Musicale
-  $("#genere").change(function() {
-  //  $(".dischi").text("");
-    var selectedGenre = $(this).children("option:selected").val();
-    dati(selectedGenre);
-  });
-
-
-
-
+// Scelta Genere Musicale
+$("#genere").change(function() {
+//  $(".dischi").text("");
+  var selectedGenre = $(this).children("option:selected").val();
+  dati(selectedGenre);
+});
 
 });

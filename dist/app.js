@@ -138,7 +138,7 @@ $("document").ready(function () {
 
 
   $("#genere").change(function () {
-    $(".dischi").text("");
+    //  $(".dischi").text("");
     var selectedGenre = $(this).children("option:selected").val();
     dati(selectedGenre);
   });
