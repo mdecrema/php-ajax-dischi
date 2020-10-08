@@ -3,6 +3,9 @@
 
 $("document").ready(function() {
 
+dati(5);
+
+function dati(num) {
   $.ajax({
   url: "http://localhost/php-ajax-dischi/api.php",
   method: "GET",
@@ -10,15 +13,15 @@ $("document").ready(function() {
     var cd = data;
     console.log(cd);
     // Richiamo la funzione 'datiAlbum' e gli passo l'argomento
-    datiAlbum(cd, "5");
+    datiAlbum(cd, num);
   },
   error: function (richiesta, stato, errori) {
     alert("Errore: "+errori);
   }
   })
+}
 
   function datiAlbum(value, genre) {
-
     for (i=0; i<=value.length; i++) {
       let brano = value[i];
 
@@ -48,23 +51,12 @@ $("document").ready(function() {
 
   // Scelta Genere Musicale
   $("#genere").change(function() {
+    $(".dischi").text("");
     var selectedGenre = $(this).children("option:selected").val();
-    console.log(selectedGenre);
+    dati(selectedGenre);
+  });
 
-  $.ajax({
-  url: "http://localhost/php-ajax-dischi/api.php",
-  method: "GET",
-  success: function (data, stato) {
-    var cd = data;
-    console.log(cd);
-    // Richiamo la funzione 'datiAlbum' e gli passo l'argomento
-    datiAlbum(cd, selectedGenre);
-  },
-  error: function (richiesta, stato, errori) {
-    alert("Errore: "+errori);
-  }
-  })
-})
+
 
 
 

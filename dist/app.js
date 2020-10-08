@@ -96,19 +96,23 @@
 //const Handlebars = require("handlebars");
 //const $ = require("jquery");
 $("document").ready(function () {
-  $.ajax({
-    url: "http://localhost/php-ajax-dischi/api.php",
-    method: "GET",
-    success: function success(data, stato) {
-      var cd = data;
-      console.log(cd); // Richiamo la funzione 'datiAlbum' e gli passo l'argomento
+  dati(5);
 
-      datiAlbum(cd, "5");
-    },
-    error: function error(richiesta, stato, errori) {
-      alert("Errore: " + errori);
-    }
-  });
+  function dati(num) {
+    $.ajax({
+      url: "http://localhost/php-ajax-dischi/api.php",
+      method: "GET",
+      success: function success(data, stato) {
+        var cd = data;
+        console.log(cd); // Richiamo la funzione 'datiAlbum' e gli passo l'argomento
+
+        datiAlbum(cd, num);
+      },
+      error: function error(richiesta, stato, errori) {
+        alert("Errore: " + errori);
+      }
+    });
+  }
 
   function datiAlbum(value, genre) {
     for (i = 0; i <= value.length; i++) {
@@ -134,21 +138,9 @@ $("document").ready(function () {
 
 
   $("#genere").change(function () {
+    $(".dischi").text("");
     var selectedGenre = $(this).children("option:selected").val();
-    console.log(selectedGenre);
-    $.ajax({
-      url: "http://localhost/php-ajax-dischi/api.php",
-      method: "GET",
-      success: function success(data, stato) {
-        var cd = data;
-        console.log(cd); // Richiamo la funzione 'datiAlbum' e gli passo l'argomento
-
-        datiAlbum(cd, selectedGenre);
-      },
-      error: function error(richiesta, stato, errori) {
-        alert("Errore: " + errori);
-      }
-    });
+    dati(selectedGenre);
   });
 });
 
