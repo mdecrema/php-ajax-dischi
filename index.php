@@ -14,16 +14,17 @@
       <header>
         <div class="container">
           <img src="img/logo.png" alt="logo" />
-      <!--<div class="generiMusicali">
+          <div class="generiMusicali">
             <select id="genere" class="">
               <option class="type" value="0">--Scegli Genere--</option>
               <option class="type" value="1">Pop</option>
               <option class="type" value="2">Rock</option>
               <option class="type" value="3">Metal</option>
               <option class="type" value="4">Jazz</option>
+              <option class="type" value="5">House/Techno</option>
             </select>
             <button class="btn-invio" id="invio" type="submit">Cerca</button>
-          </div>-->
+          </div>
         </div>
       </header>
       <!-- /Navigation bar -->
