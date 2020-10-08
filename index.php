@@ -1,4 +1,3 @@
-<?php include 'database-dischi.php'; ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -31,21 +30,26 @@
       <!-- Contenuto principale pagina -->
       <main>
         <!-- Contenitore lista album -->
+        <div class="info">
+          <h2 class="genreTitle"></h2>
+          <h3 class="infoTitle"></h3>
+        </div>
         <div class="dischi container">
 
         </div>
         <!-- /Contenitore lista album -->
-            <!-- template -->
-          <script id="entry-template" type="text/x-handlebars-template">
 
-            <div class="cd">
-              <img src="img/{{{image}}}" alt="">
-              <h3>{{title}}</h3>
-              <span class="author">{{author}}</span>
-              <span class="year">{{year}}</span>
-            </div>
+        <!-- template -->
+        <script id="entry-template" type="text/x-handlebars-template">
 
-          </script>
+          <div class="cd">
+            <img src="img/{{{image}}}" alt="">
+            <h3>{{title}}</h3>
+            <span class="author">{{author}}</span>
+            <span class="year">{{year}}</span>
+          </div>
+
+        </script>
           <!-- /template -->
       </main>
       <!-- /Contenuto principale pagina -->

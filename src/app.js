@@ -10,7 +10,6 @@ function dati(num) {
   method: "GET",
   success: function (data, stato) {
     var cd = data;
-    console.log(cd);
     // Richiamo la funzione 'datiAlbum' e gli passo l'argomento
     datiAlbum(cd, num);
   },
@@ -40,15 +39,17 @@ function dati(num) {
       var contenuto = template(album);
 
       $(".dischi").append(contenuto);
+      }
     }
   }
-}
 
 // Scelta Genere Musicale
 $("#genere").change(function() {
   $(".dischi").text("");
   var selectedGenre = $(this).children("option:selected").val();
+  var textGenre = $(this).children("option:selected").text();
   dati(selectedGenre);
+  $(".genreTitle").text(textGenre);
 });
 
 });

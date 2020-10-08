@@ -129,11 +129,11 @@ $dischi = [
     "genre" => 2
   ],
   [
-    "picture" => "murder.jpg",
+    "picture" => "murder.png",
     "title" => "music to be murdered",
     "author" => "Slim Shady",
     "year" => "1999",
-    "genre" => 5
+    "genre" => 2
   ],
   // Pop
   [

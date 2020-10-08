@@ -10,4 +10,16 @@ header {
         display: inline-block;
         transform: rotate(90deg);
     }
-}
+
+    .generiMusicali {
+      width: 200px;
+      height: 100%;
+      float: right;
+
+      #genere {
+        width: 200px;
+        font-size: 15px;
+        margin-top: 15px;
+        }
+      }
+    }

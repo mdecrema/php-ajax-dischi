@@ -36,11 +36,35 @@ header img {
   transform: rotate(90deg);
 }
 
+header .generiMusicali {
+  width: 200px;
+  height: 100%;
+  float: right;
+}
+
+header .generiMusicali #genere {
+  width: 200px;
+  font-size: 15px;
+  margin-top: 15px;
+}
+
 /* Contenuto principale */
 
 body {
   background: #1E2D3B;
   min-height: 100vh;
+}
+
+.info {
+  width: 500px;
+  height: 50px;
+  position: absolute;
+  left: 2%;
+  top: 100px;
+}
+
+.info h2 {
+  color: #fff;
 }
 
 .dischi {

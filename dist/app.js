@@ -103,8 +103,7 @@ $("document").ready(function () {
       url: "http://localhost/php-ajax-dischi/api.php",
       method: "GET",
       success: function success(data, stato) {
-        var cd = data;
-        console.log(cd); // Richiamo la funzione 'datiAlbum' e gli passo l'argomento
+        var cd = data; // Richiamo la funzione 'datiAlbum' e gli passo l'argomento
 
         datiAlbum(cd, num);
       },
@@ -140,7 +139,9 @@ $("document").ready(function () {
   $("#genere").change(function () {
     $(".dischi").text("");
     var selectedGenre = $(this).children("option:selected").val();
+    var textGenre = $(this).children("option:selected").text();
     dati(selectedGenre);
+    $(".genreTitle").text(textGenre);
   });
 });
 

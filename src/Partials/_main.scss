@@ -4,6 +4,18 @@ body {
     min-height: 100vh;
 }
 
+.info {
+  width: 500px;
+  height: 50px;
+  position: absolute;
+  left: 2%;
+  top: 100px;
+
+  h2 {
+    color: #fff;
+  }
+}
+
 .dischi {
     display: flex;
     justify-content: center;
