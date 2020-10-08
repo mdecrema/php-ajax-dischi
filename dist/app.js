@@ -101,7 +101,7 @@ $("document").ready(function () {
     method: "GET",
     success: function success(data, stato) {
       var cd = data;
-      console.log(cd); // Richiamo la funzione 'datiBrano' e gli passo l'argomento
+      console.log(cd); // Richiamo la funzione 'datiAlbum' e gli passo l'argomento
 
       datiAlbum(cd);
     },
@@ -118,7 +118,7 @@ $("document").ready(function () {
         "image": brano.picture,
         "title": brano.title,
         "author": brano.author,
-        "year": brano.year // "genre": canzone.genre
+        "year": brano.year // "genre": brano.genre
 
       }; // Vado a inserire tutto nel tamplate e lo invio all'html
 

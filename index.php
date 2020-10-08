@@ -25,13 +25,14 @@
             <button class="btn-invio" id="invio" type="submit">Cerca</button>
           </div>-->
         </div>
-        </header>
-        <!-- /Navigation bar -->
-        <!-- Contenuto principale pagina -->
+      </header>
+      <!-- /Navigation bar -->
+
+      <!-- Contenuto principale pagina -->
       <main>
         <!-- Contenitore lista album -->
         <div class="dischi container">
-            <!-- Contenitore disco -->
+            <!-- template -->
           <script id="entry-template" type="text/x-handlebars-template">
 
             <div class="cd">
@@ -42,10 +43,12 @@
             </div>
 
           </script>
-
+          <!-- /template -->
         </div>
+        <!-- /Contenitore lista album -->
       </main>
       <!-- /Contenuto principale pagina -->
+
       <!-- Script JS -->
       <script type="text/javascript" src="src/app.js"></script>
     </body>

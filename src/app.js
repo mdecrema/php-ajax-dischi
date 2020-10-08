@@ -9,7 +9,7 @@ $("document").ready(function() {
   success: function (data, stato) {
     var cd = data;
     console.log(cd);
-    // Richiamo la funzione 'datiBrano' e gli passo l'argomento
+    // Richiamo la funzione 'datiAlbum' e gli passo l'argomento
     datiAlbum(cd);
   },
   error: function (richiesta, stato, errori) {
@@ -27,7 +27,7 @@ $("document").ready(function() {
         "title": brano.title,
         "author": brano.author,
         "year": brano.year,
-      // "genre": canzone.genre
+      // "genre": brano.genre
       }
 
   // Vado a inserire tutto nel tamplate e lo invio all'html
