@@ -51,7 +51,7 @@ function dati(num) {
 
   // Scelta Genere Musicale
   $("#genere").change(function() {
-    $(".dischi").text("");
+  //  $(".dischi").text("");
     var selectedGenre = $(this).children("option:selected").val();
     dati(selectedGenre);
   });
