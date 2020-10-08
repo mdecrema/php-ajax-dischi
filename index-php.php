@@ -1,3 +1,4 @@
+
 <?php include 'database-dischi.php'; ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -6,7 +7,6 @@
     <title>Dischi</title>
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="dist/app.css">
   </head>
     <body>
@@ -32,21 +32,28 @@
         <!-- Contenitore lista album -->
         <div class="dischi container">
             <!-- Contenitore disco -->
-          <script id="entry-template" type="text/x-handlebars-template">
-
-            <div class="cd">
-              <img src="img/{{{image}}}" alt="">
-              <h3>{{title}}</h3>
-              <span class="author">{{author}}</span>
-              <span class="year">{{year}}</span>
-            </div>
-
-          </script>
-
+          <?php
+            if (!empty($dischi)) {
+            foreach ($dischi as $key) {
+          ?>
+          <div class="cd">
+            <img src="img/<?php echo $key["picture"] ?>" alt="">
+            <h3><?php echo $key["title"] ?></h3>
+            <span class="author"><?php echo $key["author"] ?></span>
+            <span class="year"><?php echo $key["year"] ?></span>
+          </div>
+          <?php
+            }
+          ?>
+          <?php
+          } else {
+          echo "<h2>Nessun Risultato</h2>";
+          }
+          ?>
         </div>
       </main>
       <!-- /Contenuto principale pagina -->
       <!-- Script JS -->
-      <script type="text/javascript" src="src/app.js"></script>
+      <script type="text/javascript" src="js/script.js"></script>
     </body>
   </html>
